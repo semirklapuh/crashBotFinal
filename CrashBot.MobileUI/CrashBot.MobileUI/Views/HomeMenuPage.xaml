@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CrashBot.MobileUI.Views.HomeMenuPage">
+    <ContentPage.Content>
+       
+        <StackLayout>
+            <Label Text="CrashBot" FontSize="42" Style="{DynamicResource ListItemTextStyle}" HorizontalOptions="Center" Margin="0,50,0,0"></Label>
+            <StackLayout VerticalOptions="Center" Margin="0,200,0,0">
+                <Label x:Name="IsConnected"  Text="Device is not connected!" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                        FontSize="16"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand">
+                <Button x:Name="Connect" Text="CONNECT" Clicked="Connect_Clicked" WidthRequest="150"></Button>
+                <Button x:Name="Disconnect" Text="DISCONNECT" Clicked="Disconnect_Clicked"  WidthRequest="150" Margin="0,20,0,0"></Button>
+                <Button x:Name="Joystick" Text="JOYSTICK" Clicked="Joystick_Clicked" IsEnabled="False" WidthRequest="150" Margin="0,20,0,0"></Button>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
